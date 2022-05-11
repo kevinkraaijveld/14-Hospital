@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 11, 2022 at 12:15 PM
+-- Generation Time: May 11, 2022 at 03:19 PM
 -- Server version: 5.6.37
 -- PHP Version: 7.1.8
 
@@ -19,6 +19,30 @@ SET time_zone = "+00:00";
 --
 -- Database: `hospital`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `clients`
+--
+
+CREATE TABLE IF NOT EXISTS `clients` (
+  `client_id` int(11) NOT NULL,
+  `client_firstname` varchar(50) DEFAULT NULL,
+  `client_lastname` varchar(50) DEFAULT NULL,
+  `client_phone` varchar(20) DEFAULT NULL,
+  `client_email` varchar(50) DEFAULT NULL,
+  `client_street` varchar(50) DEFAULT NULL,
+  `client_city` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `clients`
+--
+
+INSERT INTO `clients` (`client_id`, `client_firstname`, `client_lastname`, `client_phone`, `client_email`, `client_street`, `client_city`) VALUES
+(1, 'Janne', 'Doe', '0182-245137', 'jannedoe@gmail.com', 'Kerkstraat 12', 'Gorinchem'),
+(2, 'John', 'Doe', '0183-548751', 'johndoe@gmail.com', 'Muziekstraat 4', 'Gorinchem');
 
 -- --------------------------------------------------------
 
@@ -47,9 +71,35 @@ INSERT INTO `patients` (`patient_id`, `patient_name`, `patient_gender`, `species
 (12, 'Peter', 'Vrouw', 2, 1, 'Haaruitval'),
 (13, 'Els', NULL, 2, 1, 'Verkouden');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `species`
+--
+
+CREATE TABLE IF NOT EXISTS `species` (
+  `species_id` int(11) NOT NULL,
+  `species_description` varchar(50) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `species`
+--
+
+INSERT INTO `species` (`species_id`, `species_description`) VALUES
+(1, 'Hond'),
+(2, 'Kat'),
+(9, 'Vogel');
+
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `clients`
+--
+ALTER TABLE `clients`
+  ADD PRIMARY KEY (`client_id`);
 
 --
 -- Indexes for table `patients`
@@ -60,14 +110,30 @@ ALTER TABLE `patients`
   ADD KEY `client_id` (`client_id`);
 
 --
+-- Indexes for table `species`
+--
+ALTER TABLE `species`
+  ADD PRIMARY KEY (`species_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
+--
+-- AUTO_INCREMENT for table `clients`
+--
+ALTER TABLE `clients`
+  MODIFY `client_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `patients`
 --
 ALTER TABLE `patients`
   MODIFY `patient_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
+--
+-- AUTO_INCREMENT for table `species`
+--
+ALTER TABLE `species`
+  MODIFY `species_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- Constraints for dumped tables
 --

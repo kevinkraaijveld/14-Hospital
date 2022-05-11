@@ -62,7 +62,7 @@ function deleteSpecies($id){
 
 function deleteASpecies($id){
 		deleteThisSpecies($id); // Dit voert de 'deleteThisSpecies' functie in de SpeciesModel uit.
-	echo "<script>alert('Diersoort verwijderd'); window.location = '/hospital/species/species';</script>";
+	// echo "<script>alert('Diersoort verwijderd'); window.location = '/hospital/species/species';</script>";
 }
 
 /* 4. Edit

@@ -19,7 +19,7 @@ Het spel moet aan de volgende technische eisen voldoen:
 * Behoefte aan meer uitdaging? Bouw het project in een groot bekend framework, bijvoorbeeld: [Codeigniter](https://codeigniter.com/), [Lumen](https://lumen.laravel.com/), [Phalcon PHP](https://phalconphp.com/nl/), [Laravel](https://laravel.com/) of [Symfony](https://symfony.com/)
 
 ### Bekijk opdracht
-[Hospital](https://kevii.nl/php/hospital/)
+[Hospital](https://kevin.webprofit.site/php/hospital/)
 
 
 
